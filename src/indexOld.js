@@ -91,6 +91,17 @@ function verificaCpf(date){
     }
 }
 
+cpf.addEventListener('paste', () => {
+    let cpfValue = cpf.value;
+    if(cpf.value.length === 3){
+        cpf.value = cpfValue +  ".";
+    }else if(cpf.value.length === 7){
+        cpf.value = cpfValue +  ".";
+    }else if(cpf.value.length === 11){
+        cpf.value = cpfValue +  "-";
+    }
+})
+
 cpf.addEventListener('keypress', () => {
     let cpfValue = cpf.value;
     if(cpf.value.length === 3){
